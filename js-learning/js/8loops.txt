@@ -1,0 +1,33 @@
+for(initialization; condition; increment) {
+    // Code to be executed
+ }
+
+
+// ########## for in loop       // iterates over the properties of an object or the elements of an array
+for(variable in object) {
+  // Code to be executed
+ }
+
+
+// ############ while loop
+initialization
+while (expression) {
+  // body of loop
+  // ..
+  // ..
+  // increment
+}
+
+
+// ########### do while loop
+initialization
+do {
+    // body of loop
+    // ..
+    // ..
+    // increment
+} while(condition)
+
+
+// When we want the loop to skip its current iteration and move on to the next one we use “continue” keyword
+// continue keyword is also very useful when we want the loop to move on to the next item

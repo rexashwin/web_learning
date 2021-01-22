@@ -1,0 +1,40 @@
+//  ########### for loop
+if (condition expression) {
+    //Execute this code. 
+}
+else {
+    //Execute this code.
+}
+
+
+// ########### else if
+if (condition expression)
+{
+    //Execute this code block
+}
+else if (condition expression) {
+    //Execute this code block
+}
+else {
+
+}
+
+
+// ########### if else shortcut: ternary operator
+// Condition? expression1: expression2
+// If the condition evaluates to true, the operator returns the value of the expression1, else it returns the value of the expression2.
+
+
+// ########### Switch statement
+switch (expression) {
+    case a:
+        // code block
+        break;
+    case b:
+        // code block
+        break;
+    default:
+    // code block
+}
+
+// The break keyword is used to breaks out of the particular block. This keyword will stop the execution of the block.
