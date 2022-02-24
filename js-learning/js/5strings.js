@@ -3,11 +3,12 @@ console.log('hello this is a string ' + 'concatination');
 
 let name = 'Harry';
 const greeting = 'Good Morning';
-console.log(greeting + ' ' + name);
+console.log(greeting + ', ' + name);
 
 
-console.log('in this way you can write it\'s in js');           //backticks are used to add ' and "
+console.log('in this way you can write it\'s in js');
 console.log("in this way you can write it's in js");
+console.log(`in this way you can write it's in "js"`);            //backticks are used to add ' and "
 
 
 // ###########  different data types conbined = string

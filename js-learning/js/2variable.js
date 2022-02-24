@@ -1,9 +1,11 @@
 // ############## this will prompt alert
-alert("this is alert");
+// alert("this is alert");
 
 
 // ################### concept of var let and const
-var city = "delhi"
+var city = "delhi";
+// here "city" is the variable name 
+// variable names should be named with meaning for better practice
 console.log(city);
 {
     let city = 'Rampur';   
