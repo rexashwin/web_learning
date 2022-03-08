@@ -1,0 +1,39 @@
+/*  position properties:
+    static
+    relative
+    absolute
+    fixed
+
+    coordinate properties (used by relative and absolute positioning):
+    top
+    bottom
+    left
+    right
+*/
+* {
+    margin: 0;
+}
+
+.div1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    left: 400px;
+    top: 400px;
+}
+
+.div2 {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+
+.div3 {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(214, 214, 2);
+}

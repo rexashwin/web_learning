@@ -1,0 +1,40 @@
+*{
+    color: #fff;
+}
+.p1{
+    background-color: red;
+}
+.p2{
+    background-color: rgb(117, 117, 29);
+}
+.p3{
+    background-color: green;
+    width: 600px;
+}
+.p4{
+    background-color: purple;
+    width: 100px;
+}
+.p5{
+    background-color: rgb(26, 40, 243);
+    width: 500px;
+}
+.p6{
+    background-color: red;
+    display: inline-block;
+    width: 700px;
+}
+.p7{
+    background-color: rgb(44, 165, 221);
+    visibility: hidden;
+}
+.p8{
+    background-color: rgb(36, 214, 146);
+}
+.p9{
+    background-color: rgb(221, 218, 20);
+    display: none;
+}
+.p10{
+    background-color: rgb(44, 176, 199);
+}

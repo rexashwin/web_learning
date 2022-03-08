@@ -1,0 +1,19 @@
+/*  position properties:
+    static
+    relative
+    absolute
+    fixed
+
+    coordinate properties (used by relative and absolute positioning):
+    top
+    bottom
+    left
+    right
+*/
+
+.div1 {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+}
