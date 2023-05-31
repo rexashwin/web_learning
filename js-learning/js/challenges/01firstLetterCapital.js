@@ -12,8 +12,11 @@ let nameUppercaseFirstChar = nameFirstChar.toUpperCase();
 // c. isolate the rest letters
 let nameRestLetter = name.slice(1,name.length);
 
-// d. concactenate the first char with the rest of the char
+// d. turn the rest letters to lowercase
+nameRestLetter = nameRestLetter.toLowerCase();
+
+// e. concactenate the first char with the rest of the char
 let nameCapitalised = nameUppercaseFirstChar + nameRestLetter;
 
 // 3. greet
-alert("Hello, " + nameCapitalised);
+alert("Hello, " + nameCapitalised); 
