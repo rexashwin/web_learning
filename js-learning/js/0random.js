@@ -19,8 +19,12 @@
 // circle.draw();
 
 
+// ######### to round a decimal place number
+// console.log(Math.floor(2.5));
+// console.log(Math.round(2.5));
+
 
 // ##################################
-// randow for random number generation and floor for rounding no to nearest small integer
-// let mathRandom = (Math.floor(Math.random()*100)+1+("%"));
+// random for random number generation and floor for rounding no to nearest small integer
+// let mathRandom = (Math.floor(Math.random()*100)+1);
 // console.log(mathRandom);
