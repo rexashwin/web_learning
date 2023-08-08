@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform-transition</title>
+    <style>
+      button {
+        display: block;
+        background: #ef6262;
+        border: none;
+        border-radius: 20px;
+        padding: 5px 20px;
+        margin: 20px 0;
+        color: white;
+        cursor: pointer;
+        /* ----------------- */
+        transform: scale(1.2);
+        transform-origin: 0;
+        /* ----------------- */
+      }
+      img {
+        /* transition-property: width;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out; */
+        transition: width 1s ease-in-out, height 3s ease-in;    /* //using js with toggle button */
+        transition: border 1s ease-in-out, padding 3s ease-in;  /* //on hover */
+      }
+      img:hover {
+        border: 3px solid #ef6262;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <button id="btn">Toggle</button>
+        <img
+          id="myImage"
+          src="https://source.unsplash.com/660x320/?nature,water"
+        />
+      </div>
+    </div>
+
+    <script>
+      myImage.style.width = "146px";
+      myImage.style.height = "66px";
+
+      btn.addEventListener("click", () => {
+        if (myImage.style.width === "1246px") {
+          myImage.style.width = "146px";
+          myImage.style.height = "66px";
+        } else if (myImage.style.width === "146px") {
+          myImage.style.width = "1246px";
+          myImage.style.height = "346px";
+        }
+      });
+    </script>
+  </body>
+</html>

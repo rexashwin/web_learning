@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: absolute;
+        z-index: -1;
+        transform-origin: center;
+        animation: moveBox 8s linear infinite 1s normal;
+      }
+      .text{
+        color: aliceblue;
+        font-size: 14px;
+        background: red;
+        transform: translate(32px,38px);
+        transform-origin: center;
+        display: inline-block;
+        animation: moveText 8s linear infinite 1s normal;
+      }
+
+      @keyframes moveBox {
+        0% {
+          transform: translate(0) scale(1) rotate(0) skew(0);
+        }
+        25% {
+          transform: translate(1450px) scale(1.5) rotate(1turn) skew(20deg, 20deg);
+        }
+        50% {
+          transform: translate(1450px, 700px) scale(2.5) rotate(2turn);
+        }
+        75% {
+          transform: translate(0px, 700px) scale(1.5) rotate(1turn);
+        }
+        100% {
+          transform: translate(0) scale(1) rotate(0) skew(0);
+        }
+      }
+      @keyframes moveText {
+        0% {
+          transform: translate(32px,40px) scale(1);
+        }
+        25% {
+          transform: translate(1475px) scale(1.5);
+        }
+        50% {
+          transform: translate(1475px, 750px) scale(2.5);
+        }
+        75% {
+          transform: translate(0px, 700px) scale(1.5);
+        }
+        100% {
+          transform: translate(40px,40px) scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="text">Hello</div>
+  </body>
+</html>
