@@ -1,40 +1,64 @@
-let a = window;
-console.log(a);
+console.log(window);
+
+// #### WINDOW OBJECT PROPERTIES
+// document object for the window
+console.log(window.document);
+
+// provides information about the current URL
+console.log(window.location);
+// gives url in string
+console.log(location.toString());
+
+// provides access to the browser's session history
+console.log(window.history);
+
+// provides information about the browser and the user's environment
+console.log(window.navigator);
+
+// provides information about the user's screen
+console.log(window.screen);
+
+// the inner height of the window (viewport)
+console.log(window.innerHeight);
+
+// the inner width of the window (viewport)
+console.log(innerWidth);
+
+// y scroll location
+console.log(scrollY);
+
+// Access to the web storage local object
+console.log(window.localStorage);
+
+// Access to the web storage session object
+console.log(window.sessionStorage);
 
 
-a = window.document;
-// alert('hello harry');
-// a = prompt('This will destroy your computer. Type your name');
+// #### WINDOW OBJECT METHODS
+// displays an alert box with a message
+window.alert("Hello, world!");
 
-// a = confirm('Are you sure you want to delete this page?');
-console.log(a);
+// displays a dialog box with a message and "OK" and "Cancel" buttons
+console.log(window.confirm("Are you sure?"));
 
+// displays a dialog box that prompts the user for input
+console.log(window.prompt("Enter your name:", "Default name"));
 
-a = window.innerHeight;
-console.log(a);
+// opens a new browser window or tab
+window.open("https://www.example.com", "_blank");
 
-
-a = innerWidth;         
-console.log(a);
-
-
-a = scrollY;        // y scroll location
-console.log(a);
+// closes the current window
+window.close();
 
 
-a = location;                   // gives url
-console.log(a);
+// calls a function after a specified number of milliseconds
+let timeoutID = window.setTimeout(() => console.log("Timeout!"), 1000);
 
+// calls a function repeatedly with a fixed time delay between each call
+let intervalID = window.setInterval(() => console.log("Interval!"), 1000);
 
-a = location.toString();        // gives url in string
-console.log(a);
+// clears a timeout previously set with setTimeout()
+window.clearTimeout(timeoutID);
 
-// location.reload;
-// location.href = "//instagram.com/rexashwin";
-
-
-a = window.history;
-console.log(a);
-
-// console.log(history.length);        // count of pages have been opened on this page
-// console.log(history.go(-1));        // to go back or forward in pages
+// clears an interval previously set with setInterval()
+window.clearInterval(intervalID);
