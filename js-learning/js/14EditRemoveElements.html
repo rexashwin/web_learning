@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Edit Remove Elements</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    // function to create and add a li in ul.language element
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    // call func to add new li ul.language
+    addLanguage("Python");
+    addLanguage("Typescript");
+
+    // Optimised way to create and add a li in ul.language element
+    // to add a textNode use appendChild, because innerHTML travers all the way to add new textNode
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("golang");
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // console.log(secondLang);
+    // create a full element to replace because full element is selected by selector
+    const newli = document.createElement("li");
+    newli.textContent = "Python li Edited";
+    // replace the second li
+    secondLang.replaceWith(newli);
+
+    // Edit using outerHTML
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>JavaScript Edited</li>";
+
+    // Remove element
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>
