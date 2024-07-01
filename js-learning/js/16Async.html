@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <div>
+    <div class="setTimeout">
+        <h1>Asynchronous setTimeout</h1>
     </div>
 </body>
 <script>
@@ -18,9 +19,14 @@
     const sayName = function (str) {
         console.log(str);
     };
-    
+    const changeText = function () {
+        let textNode = document.createTextNode(" - Best JS Learning");
+        document.querySelector("h1").appendChild(textNode);
+    };
+
     const sayMyName = setTimeout(sayAshwin, 2000);
     const sayGivenName = setTimeout(sayName, 4000, "JavaScript");
+    const changeMe = setTimeout(changeText, 6000);
 </script>
 
 </html>
