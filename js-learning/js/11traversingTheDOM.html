@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversing the DOM</title>
+  </head>
+  <body>
+    <div id="parentElement">
+      <div id="firstChild">First Child</div>
+      <div id="secondChild">Second Child
+
+        <!-- hsiudghkha -->
+      </div>
+      <div id="lastChild">Last Child</div>
+    </div>
+    <div id="siblingElement">Sibling Element</div>
+
+    <script>
+      // Select the parent node
+      let parent = document.getElementById("parentElement");
+      console.log(parent); // Output: <div id="parentElement">...</div>
+
+      // Select the first child node
+      let firstChild = parent.firstElementChild;
+      console.log(firstChild); // Output: <div id="firstChild">First Child</div>
+
+      // Select the last child node
+      let lastChild = parent.lastElementChild;
+      console.log(lastChild); // Output: <div id="lastChild">Last Child</div>
+
+      // Using `children` property (ignores text nodes)
+      let secondChild = parent.children[1];
+      console.log(secondChild); // Output: <div id="secondChild">Second Child</div>
+
+      // Using `childNodes` property (includes text nodes)
+      let secondChildWithTextNodes = parent.childNodes[3]; // Assuming there are text nodes (whitespace) between elements
+      console.log(secondChildWithTextNodes); // Output: <div id="secondChild">Second Child</div>
+
+      // Select the next sibling of the parent element
+      let nextSibling = parent.nextElementSibling;
+      console.log(nextSibling); // Output: <div id="siblingElement">Sibling Element</div>
+
+      // Select the previous sibling (if it exists, example assumes there is no previous sibling)
+      let previousSibling = parent.previousElementSibling;
+      console.log(previousSibling); // Output: null
+    </script>
+  </body>
+</html>
