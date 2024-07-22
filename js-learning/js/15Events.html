@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Properties Example</title>
+</head>
+<body>
+  <!-- Button element to demonstrate event properties -->
+  <button id="myButton">Click me</button>
+  <!-- Link element to demonstrate preventDefault -->
+  <a href="https://www.example.com" id="myLink">Go to example.com</a>
+
+  <script>
+    // Get references to the button and link elements
+    const button = document.getElementById('myButton');
+    const link = document.getElementById('myLink');
+
+    // Add click event listener to the button
+    button.addEventListener('click', function(event) {
+      // Log various event properties to the console
+      console.log('Event Type:', event.type);               // Type of the event (e.g., "click")
+      console.log('Timestamp:', event.timeStamp);           // Timestamp of the event
+  </script>
+</body>
+</html>
