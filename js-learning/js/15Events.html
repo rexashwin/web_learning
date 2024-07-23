@@ -19,6 +19,16 @@
       // Log various event properties to the console
       console.log('Event Type:', event.type);               // Type of the event (e.g., "click")
       console.log('Timestamp:', event.timeStamp);           // Timestamp of the event
+      console.log('Target:', event.target);                 // Element that triggered the event
+      console.log('Current Target:', event.currentTarget);  // Element to which the event handler is attached
+      console.log('Client X:', event.clientX);              // X coordinate relative to the viewport
+      console.log('Client Y:', event.clientY);              // Y coordinate relative to the viewport
+      console.log('Screen X:', event.screenX);              // X coordinate relative to the screen
+      console.log('Screen Y:', event.screenY);              // Y coordinate relative to the screen
+      console.log('Alt Key:', event.altKey);                // Whether Alt key was pressed
+      console.log('Ctrl Key:', event.ctrlKey);              // Whether Ctrl key was pressed
+      console.log('Shift Key:', event.shiftKey);            // Whether Shift key was pressed
+    });
   </script>
 </body>
 </html>
