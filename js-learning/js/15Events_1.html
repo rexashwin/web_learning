@@ -4,16 +4,27 @@
   <title>Event Properties Example</title>
 </head>
 <body>
+  <!-- Event Handling METHOD 01 - using HTML attributes -->
+  <!-- <button onclick="alert('Button clicked!')">Click me</button> -->
+
+
   <!-- Button element to demonstrate event properties -->
   <button id="myButton">Click me</button>
   <!-- Link element to demonstrate preventDefault -->
   <a href="https://www.example.com" id="myLink">Go to example.com</a>
 
   <script>
+    // ## Event Handling METHOD 02 - using DOM properties
+    // const button = document.querySelector("button");
+    // button.onclick = function () {
+    //   alert("Button clicked!");
+    // };
+
     // Get references to the button and link elements
     const button = document.getElementById('myButton');
     const link = document.getElementById('myLink');
 
+    // ## Event Handling METHOD 02 - using `addEventListener`
     // Add click event listener to the button
     button.addEventListener('click', function(event) {
       // Log various event properties to the console
@@ -28,6 +39,15 @@
       console.log('Alt Key:', event.altKey);                // Whether Alt key was pressed
       console.log('Ctrl Key:', event.ctrlKey);              // Whether Ctrl key was pressed
       console.log('Shift Key:', event.shiftKey);            // Whether Shift key was pressed
+      console.log('Default Prevented:', event.defaultPrevented); // Whether default action is prevented
+    });
+
+    // Add click event listener to the link
+    link.addEventListener('click', function(event) {
+      // Prevent the default action of navigating to the URL
+      event.preventDefault();
+      // Log a message indicating that the default action was prevented
+      console.log('Default action prevented for link click.');
     });
   </script>
 </body>
