@@ -21,7 +21,7 @@
     <ul id="myList">
       <li class="box1">Item 1</li>
       <li class="box2">Item 2 (with stopPropagation)</li>
-      <li class="box3">Item 3</li>
+      <li class="box3">Item 3 (without stopPropagation)</li>
     </ul>
 
     <script>
@@ -35,11 +35,17 @@
 
       // Get items with the class "box2 and box3"
       const box2 = document.querySelector(".box2");
+      const box3 = document.querySelector(".box3");
 
       // Add click event listener to box2
       box2.addEventListener("click", function (e) {
         event.stopPropagation(); // Prevent the event from bubbling up to the ul
         alert("Item 2 clicked");
+      });
+
+      // Add click event listener to box3
+      box3.addEventListener("click", function (e) {
+        alert("Item 3 clicked");
       });
     </script>
   </body>
