@@ -10,7 +10,6 @@
 <body>
     <div class="setTimeout">
         <h1>Asynchronous setTimeout</h1>
-        <button id="stopTimeout">Stop</button>
     </div>
 </body>
 <script>
@@ -21,18 +20,13 @@
         console.log(str);
     };
     const changeText = function () {
-        let textNode = document.createTextNode(" - Best JS Learning");
+        let textNode = "Best JS Learning";
         document.querySelector("h1").appendChild(textNode);
     };
-
+    
     const sayMyName = setTimeout(sayAshwin, 2000);
-    const sayGivenName = setTimeout(sayName, 4000, "JavaScript");
-    const changeMe = setTimeout(changeText, 6000);
-
-    document.querySelector("#stopTimeout").addEventListener("click", function () {
-        clearTimeout(changeMe);
-        console.log("STOPPED");
-    });
+    const sayGivenName = setTimeout(sayName, 2000, "JavaScript");
+    const changeMe = setTimeout(changeText, 5000);
 </script>
 
 </html>
