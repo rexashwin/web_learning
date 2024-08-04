@@ -12,6 +12,11 @@
         <h1>Asynchronous setTimeout</h1>
         <button id="stopTimeout">Stop</button>
     </div>
+    <div class="setInterval">
+        <h1>Asynchronous setInterval</h1>
+        <button id="startInterval">Start</button>
+        <button id="stopInterval">Stop</button>
+    </div>
 </body>
 <script>
     // -------- setTimeout --------
@@ -39,7 +44,10 @@
     const sayDate = function (str) {
         console.log(str, Date.now());
     }
-    const intervalId = setInterval(sayDate, 2000, "Hello");
+
+    document.querySelector("#startInterval").addEventListener("click", function () {
+        const intervalId = setInterval(sayDate, 2000, "Hello")
+    });
 </script>
 
 </html>
