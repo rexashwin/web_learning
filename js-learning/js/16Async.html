@@ -45,9 +45,25 @@
         console.log(str, Date.now());
     }
 
-    document.querySelector("#startInterval").addEventListener("click", function () {
-        const intervalId = setInterval(sayDate, 2000, "Hello")
-    });
+    // document.querySelector("#startInterval").addEventListener("click", function () {
+    //     const intervalId = setInterval(sayDate, 2000, "Hello")
+    // });
+
+    // trying to stop interval on stop button
+    let intervalId;
+    function startInterval() {
+        intervalId = setInterval(sayDate, 2000, "Hello");
+    }
+
+    function stopInterval() {
+        clearInterval(intervalId);
+        console.log("Stopped Interval");
+    }
+
+    document.querySelector("#startInterval").addEventListener("click", startInterval);
+
+    document.querySelector("#stopInterval").addEventListener("click", stopInterval);
+
 </script>
 
 </html>
