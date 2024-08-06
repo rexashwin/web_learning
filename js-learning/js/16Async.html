@@ -58,6 +58,7 @@
     function stopInterval() {
         clearInterval(intervalId);
         console.log("Stopped Interval");
+        intervalId = null;
     }
 
     document.querySelector("#startInterval").addEventListener("click", startInterval);
