@@ -52,7 +52,9 @@
     // trying to stop interval on stop button
     let intervalId;
     function startInterval() {
-        intervalId = setInterval(sayDate, 2000, "Hello");
+        if (!intervalId) {
+            intervalId = setInterval(sayDate, 2000, "Hello");
+        }
     }
 
     function stopInterval() {
