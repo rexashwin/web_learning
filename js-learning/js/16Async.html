@@ -20,17 +20,23 @@
 </body>
 <script>
     // -------- setTimeout --------
+
+    // Function to log "Ashwin" to the console after a delay
     const sayAshwin = function () {
         console.log("Ashwin");
     };
+
+    // Function to log a given string to the console after a delay
     const sayName = function (str) {
-        console.log(str);
-    };
-    const changeText = function () {
-        let textNode = document.createTextNode(" - Best JS Learning");
-        document.querySelector("h1").appendChild(textNode);
+        console.log(str); // Logs the passed string argument
     };
 
+    // Function to append a text node to the first <h1> element after a delay
+    const changeText = function () {
+        let textNode = document.createTextNode(" - Best JS Learning"); // Creates a new text node
+        document.querySelector("h1").appendChild(textNode); // Appends the text node to the first <h1> element found
+    };
+    
     const sayMyName = setTimeout(sayAshwin, 1000);
     const sayGivenName = setTimeout(sayName, 2000, "JavaScript");
     const changeMe = setTimeout(changeText, 4000);
