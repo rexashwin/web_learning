@@ -36,14 +36,20 @@
         let textNode = document.createTextNode(" - Best JS Learning"); // Creates a new text node
         document.querySelector("h1").appendChild(textNode); // Appends the text node to the first <h1> element found
     };
-    
+
+    // Set a timeout to call sayAshwin after 1 second (1000 ms)
     const sayMyName = setTimeout(sayAshwin, 1000);
+
+    // Set a timeout to call sayName with "JavaScript" after 2 seconds (2000 ms)
     const sayGivenName = setTimeout(sayName, 2000, "JavaScript");
+
+    // Set a timeout to call changeText after 4 seconds (4000 ms)
     const changeMe = setTimeout(changeText, 4000);
 
+    // Event listener to stop the changeText timeout when the "Stop" button is clicked
     document.querySelector("#stopTimeout").addEventListener("click", function () {
-        clearTimeout(changeMe);
-        console.log("STOPPED");
+        clearTimeout(changeMe); // Cancels the changeText timeout
+        console.log("STOPPED"); // Logs that the timeout has been stopped
     });
 
     // -------- setInterval --------
