@@ -61,10 +61,11 @@
 
     // Declare a variable to hold the interval ID, initialized to undefined
     let intervalId;
-    
+
+    // Function to start an interval that logs "Hello" and the current timestamp every 2 seconds (2000 ms)
     function startInterval() {
-        if (!intervalId) {
-            intervalId = setInterval(sayDate, 2000, "Hello");
+        if (!intervalId) { // Check if an interval is not already running
+            intervalId = setInterval(sayDate, 2000, "Hello"); // Starts the interval and stores the interval ID
         }
     }
 
