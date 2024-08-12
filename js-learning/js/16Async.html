@@ -69,10 +69,11 @@
         }
     }
 
+    // Function to stop the interval when the "Stop" button is clicked
     function stopInterval() {
-        clearInterval(intervalId);
-        console.log("Stopped Interval");
-        intervalId = null;
+        clearInterval(intervalId); // Clears the interval using the stored interval ID
+        console.log("Stopped Interval"); // Logs that the interval has been stopped
+        intervalId = null; // Resets the interval ID to null, indicating no interval is running
     }
 
     document.querySelector("#startInterval").addEventListener("click", startInterval);
