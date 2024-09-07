@@ -12,6 +12,7 @@
     let requestUrl = "https://api.github.com/users/rexashwin";
     let xhr = new XMLHttpRequest();
     xhr = xhr.open('GET', requestUrl);
+    console.log(xhr.readyState);
     xhr.send();
 </script>
 </html>
