@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Request - XMLHTTPRequest</title>
 </head>
+
 <body style="background-color: #212121;">
-    
+
 </body>
 <script>
     let requestUrl = "https://api.github.com/users/rexashwin";
     let xhr = new XMLHttpRequest();
     xhr.open('GET', requestUrl);
-    xhr.onreadystatechange = ()=>{
+    xhr.onreadystatechange = () => {
         console.log(xhr.readyState);
     }
     xhr.send();
 </script>
+
 </html>
