@@ -14,10 +14,10 @@
     let requestUrl = "https://api.github.com/users/rexashwin";
     let xhr = new XMLHttpRequest();
     xhr.open('GET', requestUrl);
-    xhr.onreadystatechange = () => {
+    xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
         if(xhr.readyState === 4){
-            console.log(this.responseText);
+            console.log(this.responseText); // this will return as string
         }
     }
     xhr.send();
