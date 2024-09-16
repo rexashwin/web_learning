@@ -18,6 +18,7 @@
         console.log(xhr.readyState);
         if(xhr.readyState === 4){
             console.log(this.responseText); // this will return as string
+            console.log(typeof this.responseText);
         }
     }
     xhr.send();
