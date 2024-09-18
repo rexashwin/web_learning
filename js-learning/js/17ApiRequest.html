@@ -17,10 +17,11 @@
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
         if(xhr.readyState === 4){
-            console.log(this.responseText); // this will return as string
-            console.log(typeof this.responseText);
+            // console.log(this.responseText); // this will return as string
+            // console.log(typeof this.responseText);
             let data = JSON.parse(this.responseText);
-            console.log(data);
+            console.log(data);  //gives Object
+            console.log(typeof data); //Object
         }
     }
     xhr.send();
