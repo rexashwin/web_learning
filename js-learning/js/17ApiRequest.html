@@ -22,6 +22,7 @@
             let data = JSON.parse(this.responseText);
             console.log(data);  //gives Object
             console.log(typeof data); //Object
+            console.log(`${data.name}'s Public Repos: ${data.public_repos}`); // accessing object properties from api
         }
     }
     xhr.send();
