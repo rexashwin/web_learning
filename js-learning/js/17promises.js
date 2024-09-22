@@ -6,3 +6,5 @@ const promiseOne = new Promise(function(resolve, reject){
         console.log("promiseOne - Async Task");
     }, 1000);
 });
+
+promiseOne.then();
