@@ -4,6 +4,7 @@ const promiseOne = new Promise(function(resolve, reject){
     // DB calls, cyrptography, network calls
     setTimeout(function(){
         console.log("promiseOne - Async Task");
+        resolve();
     }, 1000);
 });
 
