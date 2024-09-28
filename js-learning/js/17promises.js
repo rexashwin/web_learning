@@ -9,5 +9,7 @@ const promiseOne = new Promise(function(resolve, reject){
 });
 
 promiseOne.then(function(){
-    console.log("promise is consumed");
+    console.log("promiseOne is consumed");
 });
+
+// create Promise without storing in variables
