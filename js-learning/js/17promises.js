@@ -13,3 +13,4 @@ promiseOne.then(function(){
 });
 
 // create Promise without storing in variables
+new Promise2(function(resolve, reject){})
