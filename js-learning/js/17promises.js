@@ -13,8 +13,10 @@ promiseOne.then(function(){
 });
 
 // create Promise without storing in variables
-new Promise2(function(resolve, reject){
+new PromiseTwo(function(resolve, reject){
     setTimeout(function(){
         console.log("Async task 2");
     })
+}).then(function(){
+    console.log("promise two consumed");
 })
