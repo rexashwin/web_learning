@@ -13,18 +13,8 @@
 <script>
     let requestUrl = "https://api.github.com/users/rexashwin";
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl);
-    xhr.onreadystatechange = function(){
-        console.log(xhr.readyState);
-        if(xhr.readyState === 4){
-            // console.log(this.responseText); // this will return as string
-            // console.log(typeof this.responseText);
-            let data = JSON.parse(this.responseText);
-            console.log(data);  //gives Object
-            console.log(typeof data); //Object
-            console.log(`${data.name}'s Public Repos: ${data.public_repos}`); // accessing object properties from api
-        }
-    }
+    xhr = xhr.open('GET', requestUrl);
+    console.log(xhr.readyState);
     xhr.send();
 </script>
 
