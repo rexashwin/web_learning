@@ -12,7 +12,6 @@ promiseOne.then(function(){
     console.log("promiseOne is consumed");
 });
 
-
 // create Promise without storing in variables
 new Promise(function(resolve, reject){
     setTimeout(function(){
@@ -21,9 +20,4 @@ new Promise(function(resolve, reject){
     }, 2000)
 }).then(function(){
     console.log("promise two consumed");
-});
-
-
-const promiseThree = new Promise(function(resolve, reject){
-    
 });
