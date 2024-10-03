@@ -12,12 +12,18 @@ promiseOne.then(function(){
     console.log("promiseOne is consumed");
 });
 
+
 // create Promise without storing in variables
-new PromiseTwo(function(resolve, reject){
+new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log("Async task 2");
         resolve();
-    })
+    }, 2000)
 }).then(function(){
     console.log("promise two consumed");
+});
+
+
+const promiseThree = new Promise(function(resolve, reject){
+    
 });
