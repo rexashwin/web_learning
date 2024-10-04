@@ -21,3 +21,11 @@ new Promise(function(resolve, reject){
 }).then(function(){
     console.log("promise two consumed");
 });
+
+
+// promise three: passing parameter in resolve to .then function
+const promiseThree = new Promise(function(resolve, reject){
+    setTimeout(() => {
+        resolve({username: "Artika", email: "artika@example.com"})
+    }, 3000);
+});
