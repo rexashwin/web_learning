@@ -29,3 +29,7 @@ const promiseThree = new Promise(function(resolve, reject){
         resolve({username: "Artika", email: "artika@example.com"})
     }, 3000);
 });
+
+promiseThree.then(function(user){
+    console.log(user);
+})
