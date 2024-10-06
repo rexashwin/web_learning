@@ -15,7 +15,7 @@ promiseOne.then(function(){
 // create Promise without storing in variables
 new Promise(function(resolve, reject){
     setTimeout(function(){
-        console.log("Async task 2");
+        console.log("\nAsync task 2");
         resolve();
     }, 2000)
 }).then(function(){
@@ -31,5 +31,6 @@ const promiseThree = new Promise(function(resolve, reject){
 });
 
 promiseThree.then(function(user){
+    console.log(`\npromiseThree:`);
     console.log(user);
 })
