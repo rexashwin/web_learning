@@ -34,3 +34,16 @@ promiseThree.then(function(user){
     console.log(`\npromiseThree:`);
     console.log(user);
 })
+
+
+// promise Four: returning error using reject
+const promiseFour = new Promise(function(resolve, reject){
+    setTimeout(() => {
+        let error = false;
+        if(!error){
+            resolve({username: "Advik", email: "advik@example.com"})
+        }else{
+            reject(`ERROR: Something went wrong`);
+        }
+    }, 2000);
+})
