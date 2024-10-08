@@ -45,5 +45,10 @@ const promiseFour = new Promise(function(resolve, reject){
         }else{
             reject(`ERROR: Something went wrong`);
         }
-    }, 2000);
+    }, 4000);
+})
+
+promiseFour.then(function(user){
+    console.log(`\npromiseFour:`)
+    console.log(user);
 })
