@@ -51,4 +51,8 @@ const promiseFour = new Promise(function(resolve, reject){
 promiseFour.then(function(user){
     console.log(`\npromiseFour:`)
     console.log(user);
+    return user.username
+}).then(function(username){
+    console.log(`Extracted username: ${username}`);
+    
 })
