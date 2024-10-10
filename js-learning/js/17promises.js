@@ -39,7 +39,7 @@ promiseThree.then(function(user){
 // promise Four: returning error using reject
 const promiseFour = new Promise(function(resolve, reject){
     setTimeout(() => {
-        let error = false;
+        let error = true;
         if(!error){
             resolve({username: "Advik", email: "advik@example.com"})
         }else{
@@ -50,9 +50,10 @@ const promiseFour = new Promise(function(resolve, reject){
 
 promiseFour.then(function(user){
     console.log(`\npromiseFour:`)
-    console.log(user);
+    console.log(user);      // if there is error then 'this' will not execute without 'catch'
     return user.username
 }).then(function(username){
     console.log(`Extracted username: ${username}`);
-    
+}).catch(function(error){
+    console.log(`catch error ${error}`);
 })
