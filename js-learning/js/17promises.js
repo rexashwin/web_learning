@@ -55,5 +55,6 @@ promiseFour.then(function(user){
 }).then(function(username){
     console.log(`Extracted username: ${username}`);
 }).catch(function(error){
-    console.log(`catch error ${error}`);
+    console.log(`\npromiseFour catch error ->`);
+    console.log(error);    // Handle any potential errors from the promise
 })
