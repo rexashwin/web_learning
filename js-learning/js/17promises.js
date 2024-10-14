@@ -57,4 +57,4 @@ promiseFour.then(function(user){
 }).catch(function(error){
     console.log(`\npromiseFour catch error ->`);
     console.log(error);    // Handle any potential errors from the promise
-})
+}).finally(()=>console.log("finally: The promise is either resolved or rejected"))  // run when a promise is settled (fulfilled or rejected)
