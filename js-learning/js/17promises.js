@@ -75,5 +75,6 @@ const promiseFive = new Promise(function(resolve, reject){
 // // using async to consume promise without tryCatch gives error, if promise error is true
 async function consumePromiseFive(){
     const response = await promiseFive
+    console.log(`\npromiseFive:`);
     console.log(response);
 }
