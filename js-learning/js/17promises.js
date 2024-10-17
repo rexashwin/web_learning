@@ -17,7 +17,7 @@ new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log("\nAsync task 2");
         resolve();
-    }, 2000)
+    }, 1500)
 }).then(function(){
     console.log("promise two consumed");
 });
@@ -27,7 +27,7 @@ new Promise(function(resolve, reject){
 const promiseThree = new Promise(function(resolve, reject){
     setTimeout(() => {
         resolve({username: "Artika", email: "artika@example.com"})
-    }, 3000);
+    }, 2000);
 });
 
 promiseThree.then(function(user){
@@ -45,7 +45,7 @@ const promiseFour = new Promise(function(resolve, reject){
         }else{
             reject(`ERROR: Something went wrong`);
         }
-    }, 4000);
+    }, 2500);
 })
 
 promiseFour.then(function(user){
@@ -69,7 +69,7 @@ const promiseFive = new Promise(function(resolve, reject){
         } else {
             reject('ERROR: JS went wrong')
         }
-    }, 4500);
+    }, 3000);
 })
 
 // // using async to consume promise without tryCatch gives error, if promise error is true
@@ -82,10 +82,10 @@ const promiseFive = new Promise(function(resolve, reject){
 async function consumePromiseFive() {
     try {
         const response = await promiseFive
-        console.log(`\npromiseFive:`)
+        console.log(`\npromiseFive: async await try`)
         console.log(response)
     } catch (error) {
-        console.log(`\npromiseFive:`)
+        console.log(`\npromiseFive: async await catch`)
         console.log(error)
     }
 }
