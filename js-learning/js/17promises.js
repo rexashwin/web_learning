@@ -63,7 +63,7 @@ promiseFour.then(function(user){
 // promise five
 const promiseFive = new Promise(function(resolve, reject){
     setTimeout(()=>{
-        let error = false
+        let error = true
         if (!error) {
             resolve({username: "javascript", password: "123"})
         } else {
@@ -73,10 +73,21 @@ const promiseFive = new Promise(function(resolve, reject){
 })
 
 // // using async to consume promise without tryCatch gives error, if promise error is true
-async function consumePromiseFive(){
-    const response = await promiseFive
-    console.log(`\npromiseFive:`);
-    console.log(response);
+// async function consumePromiseFive(){
+//     const response = await promiseFive
+//     console.log(`\npromiseFive:`);
+//     console.log(response);
+// }
+
+async function consumePromiseFive() {
+    try {
+        const response = await promiseFive
+        console.log(`\npromiseFive:`)
+        console.log(response)
+    } catch (error) {
+        console.log(`\npromiseFive:`)
+        console.log(error)
+    }
 }
 
 consumePromiseFive()
