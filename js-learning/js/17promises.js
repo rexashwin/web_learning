@@ -63,7 +63,7 @@ promiseFour.then(function(user){
 // promise five
 const promiseFive = new Promise(function(resolve, reject){
     setTimeout(()=>{
-        let error = true
+        let error = false
         if (!error) {
             resolve({username: "javascript", password: "123"})
         } else {
@@ -78,3 +78,5 @@ async function consumePromiseFive(){
     console.log(`\npromiseFive:`);
     console.log(response);
 }
+
+consumePromiseFive()
