@@ -63,7 +63,7 @@ promiseFour.then(function(user){
 // promise five
 const promiseFive = new Promise(function(resolve, reject){
     setTimeout(()=>{
-        let error = true
+        let error = false
         if (!error) {
             resolve({username: "javascript", password: "123"})
         } else {
@@ -91,3 +91,10 @@ async function consumePromiseFive() {
 }
 
 consumePromiseFive()
+
+
+async function getAllUser(){
+    const response = await fetch('https://api.github.com/users/rexashwin');
+    console.log(response);
+}
+getAllUser();
