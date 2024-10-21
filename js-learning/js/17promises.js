@@ -93,10 +93,22 @@ async function consumePromiseFive() {
 consumePromiseFive()
 
 
+// // ## fetch using async await without try...catch doen't works
+// async function getAllUser(){
+//     const response = await fetch('https://api.github.com/users/rexashwin');
+//     // console.log(response);
+//     const data = await response.json()
+//     console.log(data);
+// }
+// getAllUser();
+
 async function getAllUser(){
-    const response = await fetch('https://api.github.com/users/rexashwin');
-    // console.log(response);
-    const data = await response.json()
-    console.log(data);
+    try{
+        const response = await fetch('https://api.github.com/users/rexashwin');
+        console.log(response);
+    }
+    catch{
+        console.log(`E: ${error}`);
+    }
 }
-getAllUser();
+getAllUser()
