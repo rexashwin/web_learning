@@ -107,7 +107,7 @@ async function getAllUser(){
         const response = await fetch('https://api.github.com/users/rexashwin');
         console.log(response);
     }
-    catch{
+    catch(error){
         console.log(`E: ${error}`);
     }
 }
