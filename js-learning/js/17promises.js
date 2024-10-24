@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 // creating Promises
 const promiseOne = new Promise(function(resolve, reject){
     // do any async task

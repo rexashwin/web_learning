@@ -1,0 +1,16 @@
+{
+  "name": "practise",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "closure. js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" 8& exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node-fetch": "^2.6.11",
+    "node-fetch": "^3.3.2"
+  }
+}
