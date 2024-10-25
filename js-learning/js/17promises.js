@@ -104,10 +104,10 @@ consumePromiseFive()
 // }
 // getAllUser();
 
-async function getAllUser(){
+async function getAllUserSix(){
     try{
         const response = await fetch('https://api.github.com/users/rexashwin');
-        console.log(response);
+        console.log(`\ngetAllUserSix: `);
         const data = await response.json()
         console.log(data);
     }
@@ -115,4 +115,4 @@ async function getAllUser(){
         console.log(`E: ${error}`);
     }
 }
-getAllUser()
+getAllUserSix()
