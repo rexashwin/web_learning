@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-const delayedGreeting = new Promise(function (resolve, reject) {
+const delayedGreeting = new Promise(function (name, timeout, resolve, reject) {
     if (timeout > 0) {
         setTimeout(() => {
             resolve(`Hello ${name}!`)
