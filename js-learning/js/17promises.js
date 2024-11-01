@@ -1,73 +1,73 @@
 import fetch from "node-fetch";
 
 // creating Promises
-const promiseOne = new Promise(function(resolve, reject){
+const promiseOne = new Promise(function (resolve, reject) {
     // do any async task
     // DB calls, cyrptography, network calls
-    setTimeout(function(){
+    setTimeout(function () {
         console.log("promiseOne - Async Task");
         resolve();  // without reslove() `then` function will not run
     }, 1000);
 });
 
-promiseOne.then(function(){
+promiseOne.then(function () {
     console.log("promiseOne is consumed");
 });
 
 // create Promise without storing in variables
-new Promise(function(resolve, reject){
-    setTimeout(function(){
+new Promise(function (resolve, reject) {
+    setTimeout(function () {
         console.log("\nAsync task 2");
         resolve();
     }, 1500)
-}).then(function(){
+}).then(function () {
     console.log("promise two consumed");
 });
 
 
 // promise three: passing parameter in resolve to .then function
-const promiseThree = new Promise(function(resolve, reject){
+const promiseThree = new Promise(function (resolve, reject) {
     setTimeout(() => {
-        resolve({username: "Artika", email: "artika@example.com"})
+        resolve({ username: "Artika", email: "artika@example.com" })
     }, 2000);
 });
 
-promiseThree.then(function(user){
+promiseThree.then(function (user) {
     console.log(`\npromiseThree:`);
     console.log(user);
 })
 
 
 // promise Four: returning error using reject
-const promiseFour = new Promise(function(resolve, reject){
+const promiseFour = new Promise(function (resolve, reject) {
     setTimeout(() => {
         let error = true;
-        if(!error){
-            resolve({username: "Advik", email: "advik@example.com"})
-        }else{
+        if (!error) {
+            resolve({ username: "Advik", email: "advik@example.com" })
+        } else {
             reject(`ERROR: Something went wrong`);
         }
     }, 2500);
 })
 
-promiseFour.then(function(user){
+promiseFour.then(function (user) {
     console.log(`\npromiseFour:`)
     console.log(user);      // if there is error then 'this' will not execute without 'catch'
     return user.username
-}).then(function(username){
+}).then(function (username) {
     console.log(`Extracted username: ${username}`);
-}).catch(function(error){
+}).catch(function (error) {
     console.log(`\npromiseFour catch error ->`);
     console.log(error);    // Handle any potential errors from the promise
-}).finally(()=>console.log("finally: The promise is either resolved or rejected"))  // run when a promise is settled (fulfilled or rejected)
+}).finally(() => console.log("finally: The promise is either resolved or rejected"))  // run when a promise is settled (fulfilled or rejected)
 
 
 // promise five
-const promiseFive = new Promise(function(resolve, reject){
-    setTimeout(()=>{
+const promiseFive = new Promise(function (resolve, reject) {
+    setTimeout(() => {
         let error = false
         if (!error) {
-            resolve({username: "javascript", password: "123"})
+            resolve({ username: "javascript", password: "123" })
         } else {
             reject('ERROR: JS went wrong')
         }
@@ -96,7 +96,7 @@ consumePromiseFive()
 
 
 // ## fetch using async await without try...catch doen't works if any error
-async function asyncPromiseWithoutTryCatch(){
+async function asyncPromiseWithoutTryCatch() {
     const response = await fetch('https://api.github.com/users/rexashwin');
     console.log(`\nasyncPromiseWithoutTryCatch: `);
     const data = await response.json()
@@ -104,14 +104,14 @@ async function asyncPromiseWithoutTryCatch(){
 }
 asyncPromiseWithoutTryCatch();
 
-async function getAllUserSix(){
-    try{
+async function getAllUserSix() {
+    try {
         const response = await fetch('https://api.github.com/users/rexashwin');
         console.log(`\ngetAllUserSix: `);
         const data = await response.json()
         console.log(data);
     }
-    catch(error){
+    catch (error) {
         console.log(`E: ${error}`);
     }
 }
