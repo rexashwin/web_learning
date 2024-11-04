@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 // ### Creating Promises ###
 
 // promiseOne: Basic Promise example
@@ -122,26 +120,29 @@ consumePromiseFive()
 
 // ### Fetch API with async/await ###
 
+// Importing the 'fetch' library for making HTTP requests in Node.js 
+import fetch from "node-fetch";
+
 // fetch using async await without try...catch doen't works if any error
-async function asyncPromiseWithoutTryCatch() {
+async function fetchWithoutTryCatch() {
     const response = await fetch('https://api.github.com/users/rexashwin');
     const data = await response.json()
-    console.log(`\nasyncPromiseWithoutTryCatch: `);
+    console.log(`\nfetchWithoutTryCatch: `);
     console.log(data);  // This will throw an error if the fetch fails (not handled here)
 }
-asyncPromiseWithoutTryCatch();
+fetchWithoutTryCatch();
 
 
-// getAllUserSix: Calling an API with async/await and error handling
-async function getUser() {
+// fetchWithTryCatch: Calling an API with async/await and error handling
+async function fetchWithTryCatch() {
     try {
         const response = await fetch('https://api.github.com/users/rexashwin');
         const data = await response.json()
-        console.log(`\ngetUser: ${data.login}`);  // Logs the API response if successful
+        console.log(`\nfetchWithTryCatch: LoginUser:-${data.login}`);  // Logs the API response if successful
     }
     catch (error) {
         // Logs any error encountered during the fetch or data parsing
         console.log(`E: ${error}`);
     }
 }
-getUser()
+fetchWithTryCatch()
