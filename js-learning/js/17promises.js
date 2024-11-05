@@ -130,7 +130,7 @@ async function fetchWithoutTryCatch() {
     console.log(`\nfetchWithoutTryCatch: `);
     console.log(data);  // This will throw an error if the fetch fails (not handled here)
 }
-fetchWithoutTryCatch();
+// fetchWithoutTryCatch();
 
 
 // fetchWithTryCatch: Calling an API with async/await and error handling
@@ -145,4 +145,12 @@ async function fetchWithTryCatch() {
         console.log(`E: ${error}`);
     }
 }
-fetchWithTryCatch()
+// fetchWithTryCatch()
+
+// fetch using .then and .catch
+fetch("https://randomuser.me/api/")
+.then((data)=>{
+    console.log(`\nfetchWithThenCatch:`)
+    console.log(data.results[0].gender)
+})
+.catch((error)=>console.log(error));
